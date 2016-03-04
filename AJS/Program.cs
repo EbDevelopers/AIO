@@ -24,7 +24,9 @@ namespace AJS
 
                 default:
                     Chat.Print("[AJS]This Champion is not supported. Running AJS Utility.");
-                    WardTracker.WardTracker.OnLoad();      
+                    Tracker.Tracker.OnLoad();
+                    WardTracker.WardTracker.OnLoad();
+                    //PathTracker.PathTracker.OnLoad(); 
                     break;
             }
         }

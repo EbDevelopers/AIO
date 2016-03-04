@@ -166,16 +166,8 @@ namespace WardTracker
         public static System.Drawing.Size UtStrSize = GetTextExtent("?? 00:00 ??");
         public static System.Drawing.Size WardStrSize = GetTextExtent("Ward");
 
-        public static Menu Menu, lala;
-
         public static void OnLoad()
         {
-            Menu = MainMenu.AddMenu("ward.system", "Ward System");
-            {
-                lala = Menu.AddSubMenu("pb", "blbl");
-                lala.Add("track", new CheckBox("Tack enemy warsd"));
-            }
-
             Obj_AI_Base.OnProcessSpellCast += Game_OnProcessSpell;
             GameObject.OnCreate += Game_OnCreateObj;
             GameObject.OnDelete += Game_OnDeleteObj;
@@ -232,7 +224,7 @@ namespace WardTracker
 
         private static void Game_OnDeleteObj(GameObject sender, EventArgs args)
         {
-            if (!lala["track"].Cast<CheckBox>().CurrentValue)
+            if (!Tracker.Tracker.lala["track"].Cast<CheckBox>().CurrentValue)
             {
                 return;
             }
@@ -252,7 +244,7 @@ namespace WardTracker
 
         private static void Game_OnUpdate(EventArgs args)
         {
-            if (!lala["track"].Cast<CheckBox>().CurrentValue)
+            if (!Tracker.Tracker.lala["track"].Cast<CheckBox>().CurrentValue)
             {
                 return;
             }
@@ -286,7 +278,7 @@ namespace WardTracker
         private static void Game_OnProcessSpell(Obj_AI_Base hero, GameObjectProcessSpellCastEventArgs args)
         {
 
-            if (!lala["track"].Cast<CheckBox>().CurrentValue)
+            if (!Tracker.Tracker.lala["track"].Cast<CheckBox>().CurrentValue)
             {
                 return;
             }
@@ -338,7 +330,7 @@ namespace WardTracker
             }
             ConsolePrinter.Print(sender.Type + " : " + sender.Name);*/
 
-            if (!lala["track"].Cast<CheckBox>().CurrentValue)
+            if (!Tracker.Tracker.lala["track"].Cast<CheckBox>().CurrentValue)
             {
                 return;
             }
@@ -433,7 +425,7 @@ namespace WardTracker
 
         private static void Drawing_OnDraw(EventArgs args)
         {
-            if (!lala["track"].Cast<CheckBox>().CurrentValue)
+            if (!Tracker.Tracker.lala["track"].Cast<CheckBox>().CurrentValue)
             {
                 return;
             }
