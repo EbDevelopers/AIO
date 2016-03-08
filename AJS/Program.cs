@@ -26,6 +26,7 @@ namespace AJS
                     Chat.Print("[AJS]This Champion is not supported. Running AJS Utility.");
                     Tracker.Tracker.OnLoad();
                     WardTracker.WardTracker.OnLoad();
+                    Utility.Ganksystem.GankManager.OnLoad();
                     //PathTracker.PathTracker.OnLoad(); 
                     break;
             }

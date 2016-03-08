@@ -70,6 +70,7 @@
     <Compile Include="Champions\LeeSin\Program.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\Ganksystem\GankManager.cs" />
     <Compile Include="Utility\Pathsystem\PathTracker.cs" />
     <Compile Include="Utility\Spellsystem\SpellTracker.cs" />
     <Compile Include="Utility\Spellsystem\Tracker.cs" />
@@ -78,9 +79,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Utility\Ganksystem\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
