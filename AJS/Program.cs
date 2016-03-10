@@ -27,6 +27,7 @@ namespace AJS
                     Tracker.Tracker.OnLoad();
                     WardTracker.WardTracker.OnLoad();
                     Utility.Ganksystem.GankManager.OnLoad();
+                    Utility.Junglesystem.JungleTracker.OnLoad();
                     //PathTracker.PathTracker.OnLoad(); 
                     break;
             }
